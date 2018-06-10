@@ -81,3 +81,4 @@ fabric.properties
 hs_err_pid*
 
 persistence.xml
+src/main/resources/META-INF/persistence.xml
