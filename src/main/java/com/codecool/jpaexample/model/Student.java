@@ -11,15 +11,21 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
     @Temporal(TemporalType.DATE)
+    @Column(name = "DOB")
     private Date dateOfBirth;
 
+    @Transient
+    @Column(name = "age")
     private long age;
 
     @OneToOne
